@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Day-1 Tasks</title>
+</head>
+<body>
+  <h2>JavaScript Day-1 Tasks</h2>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById("output");
+
+    // 1) Check if number is Positive, Negative, or 0
+    let num = -3; // change this number to test
+    if (num > 0) {
+      output.innerHTML += `<p>${num} is Positive</p>`;
+    } else if (num < 0) {
+      output.innerHTML += `<p>${num} is Negative</p>`;
+    } else {
+      output.innerHTML += `<p>${num} is Zero</p>`;
+    }
+
+    // 2) Display numbers from 1 to 10 using for loop
+    output.innerHTML += "<p>Numbers from 1 to 10: ";
+    for (let i = 1; i <= 10; i++) {
+      output.innerHTML += i + " ";
+    }
+    output.innerHTML += "</p>";
+
+    // 3) Display all properties of a person object using for-in loop
+    let person = {name: "Abhishek", age: 21, city: "Kolhapur"};
+    output.innerHTML += "<p>Person Object Properties:<br>";
+    for (let key in person) {
+      output.innerHTML += key + ": " + person[key] + "<br>";
+    }
+    output.innerHTML += "</p>";
+  </script>
+</body>
+</html>

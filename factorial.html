@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial</title>
+</head>
+<body>
+  <h2>Factorial of a Number</h2>
+  <div id="output"></div>
+
+  <script>
+    // Function to calculate factorial
+    function factorial(n) {
+      let fact = 1;
+      for (let i = 1; i <= n; i++) {
+        fact *= i;
+      }
+      return fact;
+    }
+
+    let num = 5; // change this number to test
+    document.getElementById("output").innerHTML = 
+      `Factorial of ${num} is ${factorial(num)}`;
+  </script>
+</body>
+</html>

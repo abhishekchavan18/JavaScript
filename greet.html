@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greet User</title>
+</head>
+<body>
+  <h2>Greeting Program</h2>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById("output");
+
+    // Ask the user for their name
+    let name = prompt("Enter your name:");
+
+    // Greet the user
+    output.innerHTML = `<p>Hello ${name}!</p>`;
+  </script>
+</body>
+</html>

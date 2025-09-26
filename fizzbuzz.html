@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz</title>
+</head>
+<body>
+  <h2>FizzBuzz from 1 to 50</h2>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById("output");
+
+    for (let i = 1; i <= 50; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        output.innerHTML += "FizzBuzz <br>";
+      } else if (i % 3 === 0) {
+        output.innerHTML += "Fizz <br>";
+      } else if (i % 5 === 0) {
+        output.innerHTML += "Buzz <br>";
+      } else {
+        output.innerHTML += i + "<br>";
+      }
+    }
+  </script>
+</body>
+</html>
