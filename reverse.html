@@ -1,3 +1,4 @@
+<<<<<<< master
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,3 +25,31 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse Array</title>
+</head>
+<body>
+  <h2>Reverse Array (without .reverse())</h2>
+  <div id="output"></div>
+
+  <script>
+    // Original array
+    let arr = [1, 2, 3, 4, 5];
+    let reversed = [];
+
+    // Push elements from end to start
+    for (let i = arr.length - 1; i >= 0; i--) {
+      reversed.push(arr[i]);
+    }
+
+    // Display result
+    document.getElementById("output").innerHTML = 
+      `Original Array: [${arr}] <br> Reversed Array: [${reversed}]`;
+  </script>
+</body>
+</html>
+>>>>>>> main

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake API Data Table</title>
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h2>Fake API Data (Users)</h2>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    // Fetch fake API data
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response => response.json())
+      .then(data => {
+        const tableBody = document.querySelector("#userTable tbody");
+
+        data.forEach(user => {
+          let row = `<tr>
+                       <td>${user.id}</td>
+                       <td>${user.name}</td>
+                       <td>${user.username}</td>
+                       <td>${user.email}</td>
+                     </tr>`;
+          tableBody.innerHTML += row;
+        });
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  </script>
+</body>
+</html>
